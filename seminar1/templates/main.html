@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .rounded-img {
+            width: 40%;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 0.4em;
+            margin-bottom: 1em;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+</head>
+<body>
+<div class="container text-center my-3">
+    <div class="row">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <img class="rounded-img" src="{{ url_for('static', filename='images/1.jpg') }}" alt="image" width="100" height="130">
+            <h1 class="my-3">Мой первый сайт</h1>
+            {% if name %}
+                <h3>Меня зовут, {{ name }}!</h3>
+                <p>Пробую понимать HTML</p>
+                <p class="text-danger text-muted">
+                File "/home/user/HTML/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+                raise rewrite_traceback_stack(source=source)
+                File "/home/user/PycharmProjects/HTML/templates/main.html", line 11, in template
+                exceptions.TemplateSyntaxError: unexpected '%'
+                </p>
+                    <a href="https://youtube.com"
+                       target="_blank"
+                       class="btn btn-primary">
+                        Youtube
+                    </a>
+
+            {% else %}
+                <h2>Привет, мир!</h2>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
