@@ -1,0 +1,29 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block title %}Интернет магазин{% endblock %}</title>
+    </head>
+    <body>
+    <div>
+    <h1>Интернет-магазин</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/clothing/">Одежда</a></li>
+        <li><a href="/shoes/">Обувь</a></li>
+      </ul>
+    </nav>
+        <hr>
+    </div>
+        {% block body %}
+    <p>Интернет магазин одежды и обуви</p>
+        {% endblock %}
+    <footer class="footer">
+        <hr>
+        <p>©Все права защищены.</p>
+    </footer>
+    </body>
+</html>
