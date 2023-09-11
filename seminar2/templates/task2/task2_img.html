@@ -1,0 +1,8 @@
+{% extends 'main.html' %}
+{% block title %}Задание 2{% endblock %}
+{% block body %}
+    <h2>Задание 2</h2>
+    <a href="{{ url_for('task2_dwn') }}"><img src="{{ url_for('static', filename='img_download.png') }}"
+         alt="Картинка загрузки" width="300" height="300">
+    </a>
+{% endblock %}

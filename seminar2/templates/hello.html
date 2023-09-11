@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block title %}Hello{% endblock %}
+{% block body %}
+<form action="/hello.html" method="post">
+    <input type="text" name="name" placeholder="Enter your name" >
+    <input type="submit" value="Нажми меня">
+</form>
+<div>
+{% if name %}
+    <h1>Привет, {{ name }}!</h1>
+{% else %}
+    <h1>Привет, незнакомец!</h1>
+{% endif %}
+</div>
+{% endblock %}

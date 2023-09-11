@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width,
+                initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>{% block title %}Seminar2{% endblock %}</title>
+</head>
+<body>
+<h2>seminar2</h2>
+<hr>
+<nav>
+    <ul>
+        <li><a href="{{ url_for('main') }}">Главная</a></li>
+        <li><a href="{{ url_for('hello') }}">Задание 1</a></li>
+        <li><a href="{{ url_for('task2_img') }}">Задание 2</a></li>
+        <li><a href="{{ url_for('task3') }}">Задание 3</a></li>
+        <li><a href="{{ url_for('task4') }}">Задание 4</a></li>
+        <li><a href="{{ url_for('calc') }}">Задание 5</a></li>
+        <li><a href="{{ url_for('task6') }}">Задание 6</a></li>
+        <li><a href="{{ url_for('task7') }}">Задание 7</a></li>
+        <li><a href="{{ url_for('task8') }}">Задание 8</a></li>
+        <li><a href="{{ url_for('home') }}">Домашняя</a></li>
+    </ul>
+
+</nav>
+<hr>
+{% block body %}
+{% endblock %}
+</body>
+</html>

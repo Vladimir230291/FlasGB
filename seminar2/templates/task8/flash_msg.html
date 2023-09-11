@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% block title %} Задание 8 {% endblock %}
+{% block body %}
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+
+{% endblock %}

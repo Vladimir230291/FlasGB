@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+{% block title %}Home_work{% endblock %}
+{% block body %}
+<body>
+    <h1>Добро пожаловать, {{ name }}!</h1>
+    <a href="{{ url_for('logout') }}">Выйти</a>
+</body>
+{% endblock %}
+
+
+

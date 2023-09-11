@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+{% block title %}Home_work{% endblock %}
+{% block body %}
+<form action="{{ url_for('home') }}" method="post">
+    <input type ="text" name="name" placeholder="Enter your name" >
+    <input type = "emai" name="email" placeholder="Enter your email">
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
