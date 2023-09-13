@@ -167,11 +167,11 @@ def welcome():
 
 @app.route('/home_work/logout')
 def logout():
-    response = make_response("Вы успешно вышли")
+    response = make_response(url_for('home'))
     response.delete_cookie('name')
     response.delete_cookie('email')
     return response
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
