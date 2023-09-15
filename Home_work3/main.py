@@ -12,7 +12,7 @@ import secrets
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = secrets.token_hex(16)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users_base.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////home/user/PycharmProjects/Flask/Home_work3/instance/users.db'
 db.init_app(app)
 csrf = CSRFProtect(app)
 
@@ -30,7 +30,7 @@ def register():
         user = User(first_name=form.first_name.data,
                     last_name=form.last_name.data,
                     email=form.email.data,
-                    password=generate_password_hash(form.password.data))
+                    password=form.password.data)
         db.session.add(user)
         db.session.commit()
         return redirect(url_for('success'))
